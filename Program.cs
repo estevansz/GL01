@@ -12,9 +12,9 @@
             }
             Console.WriteLine(connStr);
 
-            if (options.Length == 1 && (options[0].StartsWith("-h")))
+            if (options.Length == 1 && options[0].StartsWith("-h"))
                 Console.WriteLine(Help());
-            if (options.Length == 1 && (options[0].StartsWith("-c")))
+            if (options.Length == 1 && options[0].StartsWith("-c"))
             {
                 Config();
                 Console.WriteLine(connStr);
