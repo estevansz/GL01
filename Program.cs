@@ -39,12 +39,7 @@
 
         static void Config()
         {
-            
-            //"Server=rds07.cloudupsoftware.com,1647;
-            //Database=UpSCVA_01079012;
-            //User Id=01079012N;
-            //Password=*NWubaxplMRvALEq^bhZ;"
-            
+          
         step1:
             Console.WriteLine("Configurar acesso ao Banco de Dados (passo 1 de 5)\n\n");
             Console.Write("Servidor: ");
