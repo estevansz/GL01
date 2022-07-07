@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static ConnStr datacom;
+        static ConfCnx connStr;
         static void Main(string[] options)
         {
             if (options.Length == 0)
@@ -10,14 +10,14 @@
                 Console.WriteLine(Help());
                 return;
             }
-            Console.WriteLine(datacom);
+            Console.WriteLine(connStr);
 
             if (options.Length == 1 && (options[0].StartsWith("-h")))
                 Console.WriteLine(Help());
             if (options.Length == 1 && (options[0].StartsWith("-c")))
             {
                 Config();
-                Console.WriteLine(datacom.ToString().Replace("(","").Replace(")","").Replace(", ",";"));
+                Console.WriteLine(connStr);
             }
 
         }
@@ -56,7 +56,7 @@
             }
             else
             {
-                datacom.Server = server;
+                connStr.Server = server;
             }
             Console.Clear();
         step2:
@@ -70,7 +70,7 @@
             }
             else
             {
-                datacom.Port = port;
+                connStr.Port = port;
             }
             Console.Clear();
         step3:
@@ -84,7 +84,7 @@
             }
             else
             {
-                datacom.DB = database;
+                connStr.DB = database;
             }
             Console.Clear();
         step4:
@@ -98,7 +98,7 @@
             }
             else
             {
-                datacom.User = userid;
+                connStr.User = userid;
             }
             Console.Clear();
         step5:
@@ -112,7 +112,7 @@
             }
             else
             {
-                datacom.Password = password;
+                connStr.Password = password;
             }
             Console.Clear();
         }

@@ -1,4 +1,4 @@
-﻿public struct ConnStr
+﻿public struct ConfCnx
 {
     public string Server;
     public string Port;
