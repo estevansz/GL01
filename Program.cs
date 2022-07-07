@@ -39,7 +39,19 @@
 
         static void Config()
         {
-          
+        step1:
+            ConfCnx cnx = ConfigConnStr();
+            if (cnx.ToString() == "")
+                goto step1;
+            else
+                connStr = cnx; 
+
+            //Implementar Config Arquivo
+        }
+
+        static ConfCnx ConfigConnStr()
+        {
+            ConfCnx cnx = new();
         step1:
             Console.WriteLine("Configurar acesso ao Banco de Dados (passo 1 de 5)\n\n");
             Console.Write("Servidor: ");
@@ -51,10 +63,10 @@
             }
             else
             {
-                connStr.Server = server;
+                cnx.Server = server;
             }
             Console.Clear();
-        step2:
+        //step2
             Console.WriteLine("Configurar acesso ao Banco de Dados (passo 2 de 5)\n\n");
             Console.Write("Porta: ");
             string? port = Console.ReadLine();
@@ -65,7 +77,7 @@
             }
             else
             {
-                connStr.Port = port;
+                cnx.Port = port;
             }
             Console.Clear();
         step3:
@@ -75,11 +87,11 @@
             if (string.IsNullOrEmpty(database))
             {
                 Console.WriteLine("A Base de Dados não pode estar embranco.");
-                goto step2;
+                goto step3;
             }
             else
             {
-                connStr.DB = database;
+                cnx.DB = database;
             }
             Console.Clear();
         step4:
@@ -89,11 +101,11 @@
             if (string.IsNullOrEmpty(userid))
             {
                 Console.WriteLine("O Nome do usuário não pode estar embranco.");
-                goto step3;
+                goto step4;
             }
             else
             {
-                connStr.User = userid;
+                cnx.User = userid;
             }
             Console.Clear();
         step5:
@@ -103,14 +115,14 @@
             if (string.IsNullOrEmpty(password))
             {
                 Console.WriteLine("A senha não pode estar embranco.");
-                goto step4;
+                goto step5;
             }
             else
             {
-                connStr.Password = password;
+                cnx.Password = password;
             }
             Console.Clear();
+            return cnx;
         }
-        
     }
 }
