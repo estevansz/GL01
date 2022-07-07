@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static DataCom datacom;
+        static ConnStr datacom;
         static void Main(string[] options)
         {
             if (options.Length == 0)
