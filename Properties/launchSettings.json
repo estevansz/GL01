@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GL01": {
+      "commandName": "Project",
+      "commandLineArgs": "-c"
+    }
+  }
+}
