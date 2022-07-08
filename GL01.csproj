@@ -1,14 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ApplicationIcon>GL01.ico</ApplicationIcon>
     <StartupObject>GL01.Program</StartupObject>
     <NoWin32Manifest>true</NoWin32Manifest>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <PackageIcon>GL01.png</PackageIcon>
+    <PackageIcon></PackageIcon>
     <AnalysisLevel>5.0-minimum</AnalysisLevel>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
@@ -20,11 +19,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="GL01.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\Desktop\GL01.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 </Project>
