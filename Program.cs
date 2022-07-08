@@ -1,4 +1,5 @@
-﻿namespace GL01
+﻿using System;
+namespace GL01
 {
     internal class Program
     {
