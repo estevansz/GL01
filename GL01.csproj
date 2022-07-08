@@ -4,7 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>GL01.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="GL01.ico" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="1.6.0" />
     <PackageReference Include="Microsoft.ML.Recommender" Version="0.18.0" />
